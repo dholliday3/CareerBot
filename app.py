@@ -172,7 +172,7 @@ def send_message(token, user_id, text):
             user_json = profile_posts.find_one({'user_id': user_id})
             company_list = findCompanies(user_json['major'], user_json['positions'])
 
-            r = send_message_helper(token, user_id, "Awesome, here are the companies you should talk to: \n" + company_list[0] + "\n" + company_list[1] + "\n" + company_list[2])
+            r = send_message_helper(token, user_id, "Awesome, here are the companies you should talk to: \n" + company_list[0] + "\n" + company_list[1] + "\n" + company_list[2] + "\n" + "In addition you should go to this link to find more awesome companies to apply to: \n" + "https://www.dice.com/products/mobile-app/")
         #Case 1.5
         #Case 2
         elif checkProfile(user_id) == 'ALL':
