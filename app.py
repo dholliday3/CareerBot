@@ -14,7 +14,7 @@ app = application
 
 
 #facebook
-PAT = 'EAADy0n6REeMBAOZB0JWWXvJZCMT2SZAqYZBYWrhWWJia4Tj9ZBpjf3ZB6besz6tS71wZBcrZBsk7KVzls0BCa86JZBkMY7l4JnHiNXYFmfKHnuKh2kruEl2dqaBrnk04fsXQdJrdubisPVXvQbU3abbvrSRzdgEsGLlpwjHJDAzbQZBzET7Bv6QW76'
+PAT = 'INSERT_FACEBOOK_PAGE_TOKEN'
 VERIFICATION_TOKEN = 'replace_your_own_token'
 
 # ======================= connecting to page ===========================
@@ -29,12 +29,12 @@ def handle_verification():
 
 # ======================= Global Varibales ===========================
 #MongoDB
-MONGO_CONNECTION ='mongodb://GTCareerBot:CareerFair2017!@jobbot-shard-00-00-kjbwt.mongodb.net:27017,jobbot-shard-00-01-kjbwt.mongodb.net:27017,jobbot-shard-00-02-kjbwt.mongodb.net:27017/test?ssl=true&replicaSet=JobBot-shard-0&authSource=admin'
+MONGO_CONNECTION ='INSERT_MONGO_CONNECTION'
 mongo_client = MongoClient(MONGO_CONNECTION)
 profile_posts = mongo_client.careerbot_database.profiles #profile db
 company_posts = mongo_client.careerbot_database.companies #company db
 #apiai
-APIAI_CLIENT_ACCESS_CODE = "bf223d0a505f4e2294e4e04ee1991ce8"
+APIAI_CLIENT_ACCESS_CODE = "INSERT_APIAI"
 try:
     ai = apiai.ApiAI(APIAI_CLIENT_ACCESS_CODE)
 except:
